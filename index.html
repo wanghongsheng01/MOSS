@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOSS</title>
+  <link rel="icon" type="image/x-icon" href="static/images/standing-human-body-silhouette.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+  <!--some informations about paper-->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!--1_this is title-->
+            <h1 class="title is-1 publication-title">MOSS: Motion-based 3D Clothed Human Synthesis from Monocular Video
+            </h1>
+            <h1 style="font-size:1.5rem">Hongsheng Wang<sup>1,2</sup>, Xiang Cai<sup>2</sup>, 
+              Xi Sun<sup>2</sup>, Jinhong Yue<sup>2</sup>,Shengyu Zhang<sup>1</sup>,  Feng Lin<sup>2</sup> and Fei
+              Wu<sup>1</sup><br></h1>
+          <br>
+          <span><sup>1</sup> Zhejiang University, China</span> &nbsp &nbsp &nbsp<span><sup>2</sup>
+              Zhejiang Lab,
+              China</span><br>
+            <!--4_this is information-->
+            <div class="is-size-5 publication-authors">
+              <!--link link and link-->
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!--5_this is paper link-->
+                  <span class="link-block">
+                    <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <!--6_this is supplementary link -->
+                  <!--7_this is Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/3DHumanRehab/MOSS" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--some introduction about paper-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <center>
+          <img src="static/images/first.png" id="tree" autoplay controls muted loop height="100%" alt="Teaser Image">
+        </center>
+        <h2 class="subtitle">
+          MOSS reconstructs 3D clothed humans with detailed joints and fine clothing folds. The right image demonstrates
+          that MOSS
+          surpasses the visual quality of previous works on MonoCap. (LPIPS* = LPIPS × 1000). Larger circles denote
+          higher FPS.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!--abstract about paper -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Single-view clothed human reconstruction holds a central position in virtual reality applications,
+              especially in
+              contexts involving intricate human motions. It presents notable challenges in achieving realistic clothing
+              deformation.
+              Current methodologies often overlook the influence of motion on surface deformation, resulting in surfaces
+              lacking the
+              constraints imposed by global motion. To overcome these limitations, we introduce an innovative framework,
+              <b>M</b>otion-Based 3D Cl<b>o</b>thed Humans <b>S</b>ynthe<b>s</b>is (MOSS), which employs kinematic
+              information
+              to achieve motion-aware Gaussian split on the human surface. Our framework consists of two modules:
+              <b>K</b>inematic
+              <b>G</b>aussian Loc<b>a</b>ting <b>S</b>platting (KGAS) and S<b>u</b>rface Deformat<b>i</b>on
+              <b>D</b>etector (UID). KGAS incorporates matrix-Fisher distribution to propagate global motion across the
+              body
+              surface. The density and rotation factors of this distribution explicitly control the Gaussians, thereby
+              enhancing the
+              realism of the reconstructed surface. Additionally, to address local occlusions in single-view, based on
+              KGAS, UID
+              identifies significant surfaces, and geometric reconstruction is performed to compensate for these
+              deformations.
+              Experimental results demonstrate that MOSS achieves state-of-the-art visual quality in 3D clothed human
+              synthesis from
+              monocular videos. Notably, we improve the Human NeRF and the Gaussian Splatting by 33.94% and 16.75% in
+              LPIPS*
+              respectively. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Pipeline about paper-->
+  <section class="hero Pipeline" style="margin-top: 50px;">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h1 class="title has-text-centered">Pipeline</h1>
+        <img src="static/images/pipeline.png" id="tree" autoplay controls muted loop height="100%" alt="Pipeline Image">
+        <h2 class="subtitle">
+          <b>MOSS framework.</b>
+          MOSS rotates and zooms the Gaussians with Fisher. The T-pose is converted to the target pose and the
+          surface folds are refined.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <section class="hero Pipeline" style="margin-top: 50px;">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <h1 class="title has-text-centered">Comparison with SOTA</h2>
+              <img src="static\images\compare.png" id="tree" autoplay controls muted loop height="100%"
+                alt="Pipeline Image">
+              <h2 class="subtitle">
+              </h2>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </section>
+
+
+
+  <section class="hero is-small is-light">
+    <!--head about this section-->
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-centered">Sequences</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px; text-align: center;">
+                <div><strong>GT</strong></div>
+                <div><strong>Ours</strong></div>
+                <div><strong>GauHuman</strong></div>
+              </div>
+            </div>
+          </div>
+          <!--vedio vedio and vedio-->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="novel-view-video"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GT/377_gt.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/ours/377.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GauHuman/377_GauHuman.mp4" type="video/mp4">
+                </video>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="novel-view-video"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GT/386_gt.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/ours/386.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GauHuman/386_GauHuman.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="novel-view-video"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GT/387_gt.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/ours/387.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GauHuman/387_GauHuman.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="novel-view-video"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GT/394_gt.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/ours/394.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GauHuman/394_GauHuman.mp4" type="video/mp4">
+                </video>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="novel-view-video"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GT/392_gt.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/ours/392.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GauHuman/392_GauHuman.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="novel-view-video"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GT/marc_images35000_36200_gt.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/ours/marc_images35000_36200.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GauHuman/marc_images35000_36200_GauHuman.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="novel-view-video"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GT/olek_images0812_gt.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/ours/olek_images0812.mp4" type="video/mp4">
+                </video>
+                <video width="100%" height="auto" controls autoplay loop muted>
+                  <source src="static/videos/train_view_videos/GauHuman/olek_images0812_GauHuman.mp4" type="video/mp4">
+                </video>
+
+              </div>
+            </div>
+          </div>
+
+
+
+</body>
+
+</html>
